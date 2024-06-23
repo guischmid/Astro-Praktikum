@@ -1,6 +1,4 @@
-Here is a draft for a `README.md` file for your GitHub repository:
 
----
 
 # Astro-Praktikum
 
