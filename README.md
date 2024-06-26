@@ -12,6 +12,7 @@ The repository includes protocols and related documents for various topics cover
 - Kapitel_5_HubbleGesetz
 - Kap_6_Jupiter
 - Kap_7_Merkur
+- Kap_7_Pulsare
 - [AstronomischesPraktikum.pdf](AstronomischesPraktikum.pdf): Main practicum document.
 
 ## Structure
