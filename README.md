@@ -10,6 +10,8 @@ The repository includes protocols and related documents for various topics cover
 
 Here is the translation of the chapter titles into English:
 
+- Chapter 1: Introduction (No protocols created)
+- Chapter 2: Physical properties of stars (No protocols created)
 - Chapter 3: Determination of Spectral Classes and Luminosity Analysis of Stars
 - Chapter 4: Cepheids and the Galactic Distance Scale
 - Chapter 5: Determination of Escape Velocity and the Hubble Constant
