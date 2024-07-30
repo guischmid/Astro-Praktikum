@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{booktabs}
+\geometry{a4paper, margin=1in}
+
+\title{Bestimmung der Rotationsperiode des Merkurs}
+\author{Astronomisches Praktikum \\
+Sommersemester 2024\\\\
+Guilherme Schmid}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Zielsetzung}
+Ziel des Versuches war es, die Rotationsperiode des Merkurs durch Analyse von Radarechos zu bestimmen. Die Messung basierte auf der Dopplerverschiebung des von der Merkuroberfläche reflektierten Signals.
+
+\section*{Durchführung}
+Die Daten wurden mit dem 300 m-Radioteleskop in Arecibo, Puerto Rico, am 17. August 1967 aufgenommen. Die Zeitverzögerung der Reflektionsregionen \(\Delta t\) wurde in Mikrosekunden gemessen, und die entsprechenden Frequenzverschiebungen wurden notiert. Die Kalibration erfolgte anhand der auf der x-Achse abgebildeten Abstände, die in mm gemessen wurden.
+
+\section*{Auswertung}
+
+\subsection*{Bestimmung der geometrischen Größen}
+\begin{align*}
+d &= \frac{1}{2} \Delta t \cdot c \\
+x &= R - d \\
+y &= \sqrt{R^2 - x^2}
+\end{align*}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+        \toprule
+        \(\Delta t (\mu s)\) & \(d (m)\) & \(x (m)\) & \(y (m)\) \\
+        \midrule
+        120 & \(1.80 \times 10^4\) & \(2.422 \times 10^6\) & \(3.32 \times 10^5\) \\
+        210 & \(3.15 \times 10^4\) & \(2.409 \times 10^6\) & \(4.29 \times 10^5\) \\
+        300 & \(4.50 \times 10^4\) & \(2.395 \times 10^6\) & \(5.25 \times 10^5\) \\
+        390 & \(5.85 \times 10^4\) & \(2.381 \times 10^6\) & \(6.19 \times 10^5\) \\
+        \bottomrule
+    \end{tabular}
+    \caption{Berechnete geometrische Größen}
+\end{table}
+
+\subsection*{Bestimmung der Radialgeschwindigkeit und der Rotationsperiode}
+Die Frequenzverschiebung \(\Delta f\) und die ursprüngliche Frequenz \(f = 430 \, \text{MHz}\) wurden genutzt, um die Radialgeschwindigkeit \(v_0\) und die Geschwindigkeit \(v\) zu bestimmen.
+
+\[
+\frac{v}{v_0} = \frac{R}{y}
+\]
+
+\[
+v_0 = \frac{\Delta f}{f} \cdot c
+\]
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+        \toprule
+        \(\Delta f (Hz)\) & \(v_0 (m/s)\) & \(v (m/s)\) & \(P (s)\) \\
+        \midrule
+        4.31 & \(3.00 \times 10^4\) & \(2.20 \times 10^2\) & \(6.97 \times 10^6\) \\
+        4.41 & \(3.06 \times 10^4\) & \(1.73 \times 10^2\) & \(8.86 \times 10^6\) \\
+        4.56 & \(3.17 \times 10^4\) & \(1.48 \times 10^2\) & \(1.04 \times 10^7\) \\
+        4.31 & \(3.00 \times 10^4\) & \(1.46 \times 10^2\) & \(1.05 \times 10^7\) \\
+        \bottomrule
+    \end{tabular}
+    \caption{Berechnete Radialgeschwindigkeit und Rotationsperiode}
+\end{table}
+
+\section*{Fazit}
+Die experimentellen Daten führten zu einer durchschnittlichen Rotationsperiode des Merkurs von etwa \( 8.47 \times 10^6 \) Sekunden (ca. 98 Tage). Der Literaturwert beträgt 58,65 Tage. Abweichungen könnten auf Messungenauigkeiten, die Annahme der Rotationsachse oder ungenaue Kalibrierungen zurückzuführen sein. Die Ergebnisse zeigen jedoch eine signifikante Nähe zum tatsächlichen Wert, was die Zuverlässigkeit der Methode bestätigt.
+\subsection*{Abstand Arecibo – SRP}
+
+Der Abstand zwischen dem Radioteleskop in Arecibo und dem subradialen Punkt (SRP) auf der Merkuroberfläche wurde berechnet basierend auf der Laufzeit des Radarsignals. Die Lichtgeschwindigkeit \(c\) beträgt \(3 \times 10^8 \, \text{m/s}\), und die gemessene Laufzeit war \(616.125 \, \text{s}\). Der berechnete Abstand beträgt:
+\[
+d = \frac{c \cdot \text{Laufzeit}}{2} = \frac{3 \times 10^8 \, \text{m/s} \times 616.125 \, \text{s}}{2} \approx 9.24 \times 10^{10} \, \text{m}
+\]
+Dies entspricht etwa \(9.24 \times 10^7 \, \text{km}\). Dieser Wert liegt zwischen dem kleinsten (0.517 au) und größten (1.483 au) Abstand, der in der Literatur für Merkur angegeben ist.
+
+
+\section*{Anhang}
+Die Berechnungen wurden mit Hilfe eines Python-Skripts durchgeführt, welches die erforderlichen Messdaten und Berechnungen automatisiert hat.
+
+
+
+
+\end{document}

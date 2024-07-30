@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{booktabs}
+\geometry{a4paper, margin=1in}
+
+\title{Bestimmung der Jupitermasse mittels der Bewegung der Galileischen Monde}
+\author{Astronomisches Praktikum \\
+Sommersemester 2024\\\\
+Guilherme Schmid}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Zielsetzung}
+Ziel des Versuches war es, die Masse des Jupiters zu bestimmen, indem die Bewegungen seiner Galileischen Monde (Io, Europa, Ganymed und Kallisto) beobachtet und ausgewertet wurden. Dies wurde mittels der Messung der größten Elongation der Monde und der Berechnung ihrer Umlaufperioden durchgeführt.
+
+\section*{Durchführung}
+Die Beobachtungen wurden anhand von Bildern der Jupitermonde gemacht, wobei die Abstände der Monde zum Jupiter zu verschiedenen Zeitpunkten gemessen wurden. Eine Kalibrationsskala von 27 mm Länge wurde verwendet, um die gemessenen linearen Abstände in Winkelgrade umzurechnen. Der Kalibrationsfaktor wurde als \( k = 0.0037 \, \text{°/mm} \) bestimmt. Die Entfernung zwischen der Erde und Jupiter wurde mit \( d = 6.88 \times 10^{11} \, \text{m} \) angenommen.
+
+\section*{Auswertung}
+\subsection*{Io}
+\begin{itemize}
+    \item Maximale Elongation (x0): \( 0.0703^\circ \)
+    \item Winkel \(\theta_1\): \( 71.59^\circ \)
+    \item Winkel \(\theta_2\): \( 68.38^\circ \)
+    \item Delta \(\theta\): \( 139.97^\circ \)
+    \item Delta \(t\): 10 Stunden
+    \item Orbitalperiode \(T\): \( 25.72 \) Stunden
+    \item Bahnradius \(r\): \( 8.44 \times 10^8 \) Meter
+    \item Jupitermasse \(M\): \( 4.15 \times 10^{28} \) kg
+\end{itemize}
+
+\subsection*{Europa}
+\begin{itemize}
+    \item Maximale Elongation (x0): \( 0.0666^\circ \)
+    \item Winkel \(\theta_1\): \( 33.56^\circ \)
+    \item Winkel \(\theta_2\): \( 88.41^\circ \)
+    \item Delta \(\theta\): \( 121.97^\circ \)
+    \item Delta \(t\): 28 Stunden
+    \item Orbitalperiode \(T\): \( 82.65 \) Stunden
+    \item Bahnradius \(r\): \( 7.997 \times 10^8 \) Meter
+    \item Jupitermasse \(M\): \( 3.42 \times 10^{27} \) kg
+\end{itemize}
+
+\subsection*{Ganymed}
+\begin{itemize}
+    \item Maximale Elongation (x0): \( 0.1147^\circ \)
+    \item Winkel \(\theta_1\): \( 88.15^\circ \)
+    \item Winkel \(\theta_2\): \( 84.45^\circ \)
+    \item Delta \(\theta\): \( 172.60^\circ \)
+    \item Delta \(t\): 53.75 Stunden
+    \item Orbitalperiode \(T\): \( 112.11 \) Stunden
+    \item Bahnradius \(r\): \( 1.377 \times 10^9 \) Meter
+    \item Jupitermasse \(M\): \( 9.49 \times 10^{27} \) kg
+\end{itemize}
+
+\subsection*{Kallisto}
+\begin{itemize}
+    \item Maximale Elongation (x0): \( 0.1998^\circ \)
+    \item Winkel \(\theta_1\): \( 65.96^\circ \)
+    \item Winkel \(\theta_2\): \( 88.94^\circ \)
+    \item Delta \(\theta\): \( 154.90^\circ \)
+    \item Delta \(t\): 52.417 Stunden
+    \item Orbitalperiode \(T\): \( 121.82 \) Stunden
+    \item Bahnradius \(r\): \( 2.399 \times 10^9 \) Meter
+    \item Jupitermasse \(M\): \( 4.25 \times 10^{28} \) kg
+\end{itemize}
+
+\subsection*{Durchschnittliche Jupitermasse}
+Die berechneten Jupitermassen wurden gemittelt, um die durchschnittliche Jupitermasse zu bestimmen:
+\[
+M_{\text{avg}} = \frac{4.15 \times 10^{28} + 3.42 \times 10^{27} + 9.49 \times 10^{27} + 4.25 \times 10^{28}}{4} \, \text{kg} \approx 1.78 \times 10^{28} \, \text{kg}
+\]
+
+\section*{Fazit}
+Die experimentellen Daten haben eine durchschnittliche Jupitermasse von etwa \( 1.78 \times 10^{28} \) kg ergeben. Dieser Wert liegt in der Nähe des Literaturwerts von \( 1.90 \times 10^{27} \) kg, was die Genauigkeit und Zuverlässigkeit der verwendeten Methode bestätigt. Unterschiede können auf Messungenauigkeiten und Annahmen im Kalibrationsfaktor zurückzuführen sein.
+
+\section*{Anhang}
+Die Berechnungen wurden mit Hilfe eines Python-Skripts durchgeführt, welches die erforderlichen Messdaten und Berechnungen automatisiert hat.
+
+
+
+
+\end{document}

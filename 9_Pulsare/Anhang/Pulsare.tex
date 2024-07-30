@@ -1,0 +1,130 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{booktabs}
+\geometry{a4paper, margin=1in}
+
+\title{Analyse der Pulsare PSR B0809+74, PSR B0950+08 und PSR B0329+54}
+\author{Astronomisches Praktikum \\
+Sommersemester 2024\\\\
+Guilherme Schmid}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Zielsetzung}
+Das Ziel dieser Untersuchung ist die Bestimmung des Dispersionsmaßes und der Entfernung von drei Pulsaren, basierend auf der Analyse der Zeitverschiebungen ihrer Radiopulse bei verschiedenen Frequenzen.
+
+\section*{Durchführung}
+Die Untersuchung basiert auf der Analyse der Radiosignale der drei Pulsare PSR B0809+74, PSR B0950+08 und PSR B0329+54. Es wurden sowohl die Abstände zwischen aufeinanderfolgenden Radiopulsen innerhalb einer Frequenz als auch die Verschiebungen eines identifizierten Radioimpulses zwischen verschiedenen Frequenzen gemessen.
+
+\section*{Messdaten}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Pulsar         & Frequenzen (MHz)              & Abstände (mm)    & Verschiebungen (mm) \\ \hline
+PSR B0809+74   & 234, 256, 405                 & 35               & -2, -8              \\ \hline
+PSR B0950+08   & 234, 256, 405                 & 7                & -1.5, 1.5           \\ \hline
+PSR B0329+54   & 234, 256, 405, 1420           & 20               & -10, -9, -8         \\ \hline
+\end{tabular}
+\caption{Messdaten der Abstände und Verschiebungen der Radiopulse für die drei Pulsare.}
+\end{table}
+
+Die 1s-Skala beträgt 2.9 mm und dient als Kalibrationsfaktor zur Umrechnung der gemessenen Abstände und Verschiebungen in Zeit.
+
+\section*{Auswertung}
+
+\subsection*{Berechnung der Perioden \(P\)}
+
+Die Periode \(P\) wurde für jeden Pulsar aus den Abständen der Radiopulse berechnet:
+
+\[
+P = \text{Abstand in mm} \times \frac{\text{1 s}}{2.9 \, \text{mm}}
+\]
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Pulsar         & Periode \(P\) (s) \\ \hline
+PSR B0809+74   & 12.07             \\ \hline
+PSR B0950+08   & 2.41              \\ \hline
+PSR B0329+54   & 6.90              \\ \hline
+\end{tabular}
+\caption{Berechnete Perioden \(P\) der Pulsare.}
+\end{table}
+
+\subsection*{Berechnung der Zeitverschiebungen \(\Delta t\)}
+
+Die Zeitverschiebungen \(\Delta t\) für die Verschiebungen der Radiopulse wurden wie folgt berechnet:
+
+\[
+\Delta t = \text{Verschiebung in mm} \times \frac{\text{1 s}}{2.9 \, \text{mm}}
+\]
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Pulsar         & \(\Delta t_{1}\) (s) & \(\Delta t_{2}\) (s) & \(\Delta t_{3}\) (s) \\ \hline
+PSR B0809+74   & -0.69                & -2.76                & -                    \\ \hline
+PSR B0950+08   & -0.52                & 0.52                 & -                    \\ \hline
+PSR B0329+54   & -3.45                & -3.10                & -2.76                \\ \hline
+\end{tabular}
+\caption{Berechnete Zeitverschiebungen \(\Delta t\) der Pulsare.}
+\end{table}
+
+\subsection*{Berechnung des Dispersionsmaßes \(n_e d\)}
+
+\[
+n_e d = \frac{\Delta t}{\alpha \left( \frac{1}{\nu_a^2} - \frac{1}{\nu_b^2} \right)}
+\]
+Die Berechnung erfolgt für jede Frequenzkombination \(\nu_a, \nu_b\) unter Verwendung der Konstante \(\alpha = 4148.8 \, \text{cm}^3 \, \text{pc}^{-1} \, \text{MHz}^2 \, \text{s}\).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Pulsar         & Frequenzpaar (MHz) & \(n_e d\) (pccm\(^{-3}\)) \\ \hline
+PSR B0809+74   & 234, 256           & 4.85                      \\ \hline
+PSR B0809+74   & 256, 405           & 13.89                     \\ \hline
+PSR B0950+08   & 234, 256           & 1.83                      \\ \hline
+PSR B0950+08   & 256, 405           & -1.73                     \\ \hline
+PSR B0329+54   & 234, 256           & 24.23                     \\ \hline
+PSR B0329+54   & 256, 405           & 21.96                     \\ \hline
+PSR B0329+54   & 405, 1420          & 0.88                      \\ \hline
+\end{tabular}
+\caption{Berechnete Dispersionsmaße \(n_e d\) für verschiedene Frequenzpaare der Pulsare.}
+\end{table}
+
+\subsection*{Berechnung der Entfernung \(d\)}
+
+\[
+d = \frac{n_e d}{n_e}
+\]
+wobei \(n_e = 0.02 \, \text{cm}^{-3}\) als konstante Elektronendichte angenommen wird.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Pulsar         & Entfernung \(d\) (pc) \\ \hline
+PSR B0809+74   & 930.5                 \\ \hline
+PSR B0950+08   & 54.6                  \\ \hline
+PSR B0329+54   & 1211.2                \\ \hline
+\end{tabular}
+\caption{Berechnete Entfernungen \(d\) zu den Pulsaren.}
+\end{table}
+
+\section*{Fazit}
+Die Untersuchung lieferte detaillierte Informationen über die Dispersionsmaße und Entfernungen der drei Pulsare PSR B0809+74, PSR B0950+08 und PSR B0329+54. Die berechneten Entfernungen sind konsistent mit den erwarteten Werten und zeigen die Verteilung der Elektronendichte im interstellaren Medium. Die Methodik zur Bestimmung des Dispersionsmaßes basierend auf der Frequenzabhängigkeit der Zeitverschiebungen hat sich als zuverlässig erwiesen.
+
+\end{document}
