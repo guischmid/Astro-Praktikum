@@ -8,8 +8,6 @@ This repository contains protocols for the Astronomy Practicum in the summer sem
 
 The repository includes protocols and related documents for various topics covered in the practicum. The current topics are:
 
-Here is the translation of the chapter titles into English:
-
 - Chapter 1: Introduction (No protocols created)
 - Chapter 2: Physical properties of stars (No protocols created)
 - Chapter 3: Determination of Spectral Classes and Luminosity Analysis of Stars
